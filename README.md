@@ -26,6 +26,10 @@ we structure the API response in controllers and send the output.
 
 ### Setup the project
 - Download this templete from github and open it in your favourite text editor.
+- Go inside the folder path and execute the following command:
+    ```
+        npm install
+    ```
 - In the root root Dirctory create a `.env` file and add the following env variables.
     ```
         PORT=<port number of your choice>
@@ -34,32 +38,15 @@ we structure the API response in controllers and send the output.
     ```
        PORT=3000
     ```
-- Inside the `src/config` folder create a file named as `config.json` and write the following code:
+- go inside the `src` folder and execute the following command: 
     ```
-    {
-      "development": {
-        "username": "root",
-        "password": null,
-        "database": "database_development",
-        "host": "127.0.0.1",
-        "dialect": "mysql"
-      },
-      "test": {
-        "username": "root",
-        "password": null,
-        "database": "database_test",
-        "host": "127.0.0.1",
-        "dialect": "mysql"
-      },
-      "production": {
-        "username": "root",
-        "password": null,
-        "database": "database_production",
-        "host": "127.0.0.1",
-        "dialect": "mysql"
-      }
-    }
+        npx sequelize init
     ```
-
+- By executing the above command you will get migrations and seeders folder along with a config.json inside the config folder.
 - If you are setting up your developement environment , then write your username and pass of your db and in dialect mention whatever db you are using for example, mysql, mariaDB.
 -If You are setting up test or production environment, make sure you also replace the host with the hosted db url.
+
+- To run the server execute
+    ```
+        npm run dev
+    ```
